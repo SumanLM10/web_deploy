@@ -1,0 +1,175 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>council website</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="councilapp/js/index.js"></script>
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+  }
+  
+  header {
+    background-color: purple;
+    color: white;
+    padding: 10px 20px;
+  }
+  
+  .header-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  nav ul li {
+    display: inline-block;
+    margin-right: 20px;
+  }
+  
+  nav ul li a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  nav ul li a:hover {
+    text-decoration: none;
+  }
+  
+  .logo {
+    display: flex;
+    align-items: center;
+  }
+
+.content {
+    padding: 40px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.content-inner {
+    width: 90%;
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.content-inner h2 {
+    margin-top: 0;
+    font-size: 24px;
+}
+
+.content-inner p {
+    font-size: 16px;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 25px;
+    transition: background-color 0.3s;
+    color: white;
+}
+
+.button-primary {
+    background-color: #03a9f4;
+    border: 2px solid #03a9f4;
+}
+
+.button-primary:hover {
+    background-color: #039be5;
+}
+
+.button-secondary {
+    background-color: #4caf50;
+    border: 2px solid #4caf50;
+}
+
+.button-secondary:hover {
+    background-color: #43a047;
+}
+
+.button-tertiary {
+    background-color: #f44336;
+    border: 2px solid #f44336;
+}
+
+.button-tertiary:hover {
+    background-color: #e53936;
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-inner">
+            <div class="logo">
+                <a href="{% url 'councilapp:home' %}"><h2 style="color: aliceblue; float: left; margin-left: 10px;">Dhulikhel City Council</h2></a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="{% url 'councilapp:home' %}" class="active"><i class="fa fa-fw fa-home"></i> Home</a></li>
+                    <li><a href="{% url 'councilapp:about' %}"><i class="fas fa-info-circle"></i> About</a></li> 
+                    <li><a href="{% url 'councilapp:create' %}"><i class="fa fa-fw fa-envelope"></i> Contact</a></li>
+                    <li><a href="{% url 'councilapp:login' %}"><i class="fa fa-fw fa-user"></i> Login</a></li>
+                    <li><a href="{% url 'councilapp:register' %}"><i class="fas fa-user-plus"></i>  Register</a></li>
+                    <li style="float: left;" class="search-bar">
+                      <form action="#" method="get">
+                        <input style="width: fit-content;" type="text" placeholder="Search..." name="search">
+                        <button type="submit"><i class="fas fa-search"></i></button>
+                      </form>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <section class="content">
+        <div class="content-inner">
+            <h2>School Directory</h2>
+            <p>Explore the directory of schools in Dhulikhel. Find information about primary, secondary, and higher education institutions.</p>
+            <a href="#" class="button button-primary">View Directory</a>
+        </div>
+        <div class="content-inner">
+            <h2>Education Programs</h2>
+            <p>Discover educational programs and initiatives offered by Dhulikhel City Council. Learn about scholarships, grants, and educational resources.</p>
+            <a href="#" class="button button-secondary">Explore Programs</a>
+        </div>
+        <div class="content-inner">
+            <h2>Community Learning</h2>
+            <p>Join community learning activities and workshops organized by Dhulikhel City Council. Enhance your skills and knowledge.</p>
+            <a href="#" class="button button-tertiary">Join Activities</a>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Dhulikhel City Council. All rights reserved.</p>
+    </footer>
+</body>
+</html>
